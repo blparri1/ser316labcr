@@ -27,8 +27,10 @@ class ServerSolution implements AccountServer {
 				int size = sizeI.intValue();
 				for (int i=0; i < size; i++) {
 					Account acc = (Account) in.readObject();
-					if (acc != null)
+					//Fix for Coding Standards - 8
+					if (acc != null) {
 						accountMap.put(acc.getName(), acc);
+					}
 				}
 			}
 		} catch (Exception e) {
@@ -68,8 +70,10 @@ class ServerSolution implements AccountServer {
 
 	public boolean newAccount(String type, String name, float balance) 
 		throws IllegalArgumentException {
-		
-		if (balance < 0.0f) throw new IllegalArgumentException("New account may not be started with a negative balance");
+		//Fix for Coding Standards - 8
+		if (balance < 0.0f) {
+			throw new IllegalArgumentException("New account may not be started with a negative balance");
+		}
 		
 		return newAccountFactory(type, name, balance);
 	}
@@ -108,9 +112,9 @@ class ServerSolution implements AccountServer {
 			out = new ObjectOutputStream(new FileOutputStream(fileName));
 
 			out.writeObject(Integer.valueOf(accountMap.size()));
-			for (int i=0; i < accountMap.size(); i++) 
-			{
-				out.writeObject(accountMap.get(i));
+			//Fix for Logic Error - 2
+			for (String key : accountMap.keySet()){
+				out.writeObject(accountMap.get(key));
 			}
 		} 
 		catch (Exception e) {
