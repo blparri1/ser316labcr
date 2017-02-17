@@ -33,8 +33,11 @@ public class Savings extends Account {
 		if (getState() == State.OPEN && amount > 0.0f) {
 			balance = balance - amount;
 			numWithdraws++;
-			if (numWithdraws > 3)
+			//Fix for Coding Standards - 8
+			if (numWithdraws > 3) {
 				balance = balance - 1.0f;
+			}
+				
 			
 			if (balance < 0.0f) {
 				setState(State.OVERDRAWN);
