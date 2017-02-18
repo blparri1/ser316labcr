@@ -27,6 +27,13 @@ class MainFrame extends JFrame {
 	JButton			displayAccountsButton;
 	JButton			displayODAccountsButton;
 
+	/**
+	Method: MainFrame Constructor
+	Inputs: String propertyFile
+	Returns: nothing
+
+	Description: Constructor for the MainFrame class
+	*/
 	public MainFrame(String propertyFile) throws IOException {
 
 		//** initialize myServer
@@ -43,11 +50,18 @@ class MainFrame extends JFrame {
 			ioe.printStackTrace();
 			throw ioe;
 		}
-		constructForm();
+		_constructForm();
 	}
 
-	
-	private void constructForm() {
+	/**
+	Method: _constructForm()
+	Inputs: none
+	Returns: void
+
+	Description: Builds the GUI for the program
+	*/
+	//Fix Coding Standard - 4
+	private void _constructForm() {
 		//*** Make these read from properties
 		typeLabel		= new JLabel(props.getProperty("TypeLabel"));
 		nameLabel		= new JLabel(props.getProperty("NameLabel"));
