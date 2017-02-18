@@ -17,7 +17,11 @@ import java.awt.FlowLayout;
 import java.awt.Container;
 import java.awt.event.*;
 import javax.swing.*;
+/**
+Class: MainFrame
 
+Description: Main class for user interfaces
+*/
 @SuppressWarnings("serial")
 class MainFrame extends JFrame {
 	AccountServer	myServer;
@@ -127,7 +131,11 @@ private	JButton			displayODAccountsButton;
 		
 		setSize(400, 250);
 	}
-
+	/**
+	  Class: DisplayHandler
+	  
+	  Description: Handles the display generically to the user with regard to GUI
+	*/
 	class DisplayHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			List<Account> accounts = null;
@@ -146,7 +154,11 @@ private	JButton			displayODAccountsButton;
 			JOptionPane.showMessageDialog(null, sb.toString());
 		}
 	}
-
+	/**
+	  Class: NewAccountHandler
+	  
+	  Description: Helps in the creation of new acccount with regard to GUI
+	*/
 	// Complete a handler for new account button
 	class NewAccountHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -161,7 +173,11 @@ private	JButton			displayODAccountsButton;
 			}
 		}
 	}
-	
+	/**
+	  Class: SaveAccountsHandler
+	  
+	  Description: Handles the GUI with regard to savings accounts
+	*/	
 	// Complete a handler for new account button
 	class SaveAccountsHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -173,7 +189,11 @@ private	JButton			displayODAccountsButton;
 			}
 		}
 	}
-
+	/**
+	  Class: DepositHandler
+	  
+	  Description: Handles the GUI with regard to deposits
+	*/
 	// Complete a handler for deposit button
 	class DepositHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -187,6 +207,11 @@ private	JButton			displayODAccountsButton;
 			}		
 		}
 	}
+	/**
+	  Class: WithdrawHandler	
+	  
+	  Description: Handles the GUI with regard to deposits
+	*/	
 	// Complete a handler for deposit button
 	class WithdrawHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -200,7 +225,11 @@ private	JButton			displayODAccountsButton;
 			}		
 		}
 	}
-	
+	/**
+	  Class: FrameHandler
+	  
+	  Description: Exits program from GUI
+	*/	
 	//** Complete a handler for the Frame that terminates 
 	//** (System.exit(1)) on windowClosing event
 	// FB Lab 3 Activity 1 Step 5
