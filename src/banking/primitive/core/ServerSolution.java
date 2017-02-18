@@ -21,9 +21,6 @@ Description: Supports the overall program with creation and usage of accounts
 */
 class ServerSolution implements AccountServer {
 	//Fix Coding Standards - 6
-	static final String fileName = "accounts.ser";
-
-	private Map<String,Account> accountMap = null;
 
 	/**
 	Method: ServerSolution Constructor
@@ -130,10 +127,6 @@ class ServerSolution implements AccountServer {
 		return accountMap.get(name);
 	}
 
-	public List<Account> getAllAccounts() {
-		return new ArrayList<Account>(accountMap.values());
-	}
-
 	public List<Account> getActiveAccounts() {
 		List<Account> result = new ArrayList<Account>();
 
@@ -144,6 +137,11 @@ class ServerSolution implements AccountServer {
 		}
 		return result;
 	}
+	
+	public List<Account> getAllAccounts() {
+		return new ArrayList<Account>(accountMap.values());
+	}
+
 	
 	/**
 	Method: saveAccounts
@@ -180,5 +178,6 @@ class ServerSolution implements AccountServer {
 			}
 		}
 	}
-
+	static final String fileName = "accounts.ser";
+	private Map<String,Account> accountMap = null;
 }

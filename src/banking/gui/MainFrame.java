@@ -24,20 +24,6 @@ Description: Main class for user interfaces
 */
 @SuppressWarnings("serial")
 class MainFrame extends JFrame {
-	AccountServer	myServer;
-private	Properties		props;
-private	JLabel			typeLabel;
-private	JLabel			nameLabel;
-private	JLabel			balanceLabel;
-private	JComboBox		typeOptions;
-private	JTextField		nameField;
-private	JTextField		balanceField;
-private	JButton 		depositButton;
-private	JButton 		withdrawButton;
-private	JButton			newAccountButton;
-private	JButton			displayAccountsButton;
-private	JButton			displayODAccountsButton;
-
 	/**
 	Method: MainFrame Constructor
 	Inputs: String propertyFile
@@ -239,4 +225,17 @@ private	JButton			displayODAccountsButton;
 			System.exit(0);
 		}
 	}
+	AccountServer	myServer;
+	private	Properties		props;
+	private	JLabel			typeLabel;
+	private	JLabel			nameLabel;
+	private	JLabel			balanceLabel;
+	private	JComboBox		typeOptions;
+	private	JTextField		nameField;
+	private	JTextField		balanceField;
+	private	JButton 		depositButton;
+	private	JButton 		withdrawButton;
+	private	JButton			newAccountButton;
+	private	JButton			displayAccountsButton;
+	private	JButton			displayODAccountsButton;
 }

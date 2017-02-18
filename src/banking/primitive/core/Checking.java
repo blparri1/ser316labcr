@@ -13,9 +13,6 @@ Description: The main account class that deals with checking accounts
 */
 public class Checking extends Account {
 	//Fix Coding Standard - 4
-	private static final long _serialVersionUID = 11L;
-	private int _numWithdraws = 0;
-	
 	/**
 	Method: Checking Constructor
 	Inputs: String name
@@ -108,4 +105,6 @@ public class Checking extends Account {
 	public String toString() {
 		return "Checking: " + getName() + ": " + getBalance();
 	}
+	private static final long _serialVersionUID = 11L;
+	private int _numWithdraws = 0;
 }

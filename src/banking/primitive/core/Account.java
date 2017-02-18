@@ -13,16 +13,9 @@ Description: The abstract class that other account type classes
 will use to inherit from.
 */
 public abstract class Account implements java.io.Serializable {
-    private static final long SERIALVERSIONUID = 1L;
-
     protected enum State {
         OPEN, CLOSED, OVERDRAWN
     };
-
-    protected float balance = 0.0F;
-    protected String name;
-    //Fix Coding Standard - 4
-    private State _state;
 
     /**
     Method: Account Constructor
@@ -47,19 +40,18 @@ public abstract class Account implements java.io.Serializable {
         this(n); // <-- MAKE THIS CHANGE HERE
         balance = b;
     }
-
-    /**
-     * @return name of the Account
-     */
-    public final String getName() {
-        return name;
-    }
-
     /**
      * @return balance in the Account
      */
     public final float getBalance() {
         return balance;
+    }
+    
+    /**
+     * @return name of the Account
+     */
+    public final String getName() {
+        return name;
     }
 
     /**
@@ -105,4 +97,9 @@ public abstract class Account implements java.io.Serializable {
         return "Account " + name + " has $" + balance + "and is " + getState()
                 + "\n";
     }
+    private static final long SERIALVERSIONUID = 1L;
+    protected float balance = 0.0F;
+    protected String name;
+    //Fix Coding Standard - 4
+    private State _state;
 }
