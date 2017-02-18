@@ -1,5 +1,9 @@
 package banking.primitive.core;
+/**
+Class: Checking
 
+Description: The main account class that deals with checking accounts
+*/
 public class Checking extends Account {
 	//Fix Coding Standard - 4
 	private static final long _serialVersionUID = 11L;

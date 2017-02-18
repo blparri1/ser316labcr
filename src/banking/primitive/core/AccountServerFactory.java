@@ -1,6 +1,11 @@
 package banking.primitive.core;
 
+/**
+Class: AccountServerFactory
 
+Description: Class enables the creation of other accounts in an
+orthogonal and object oriented style
+*/
 public class AccountServerFactory {
 
 	protected static AccountServerFactory singleton = null;
