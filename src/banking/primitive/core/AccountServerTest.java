@@ -9,19 +9,20 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class AccountServerTest {
-	private static AccountServer accountServer = null;
+	//Fix Coding Standard - 4
+	private static AccountServer _accountServer = null;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		accountServer = AccountServerFactory.getMe().lookup();
+		_accountServer = AccountServerFactory.getMe().lookup();
 	}
 
 	@Before
 	public void setUp() throws Exception {
-		accountServer.newAccount("Checking", "CheckingTest1", 100.0f);
-		accountServer.newAccount("Savings", "SavingsTest1", 200.0f);
-		accountServer.newAccount("Checking", "CheckingTest2", 300.0f);
-		accountServer.newAccount("Savings", "SavingsTest2", 400.0f);
+		_accountServer.newAccount("Checking", "CheckingTest1", 100.0f);
+		_accountServer.newAccount("Savings", "SavingsTest1", 200.0f);
+		_accountServer.newAccount("Checking", "CheckingTest2", 300.0f);
+		_accountServer.newAccount("Savings", "SavingsTest2", 400.0f);
 	}
 
 	/**
@@ -29,8 +30,8 @@ public class AccountServerTest {
 	 */
 	@Test (expected=java.lang.IllegalArgumentException.class)
 	public void testNewAccountType() {
-        assertTrue(!accountServer.newAccount("BLAH", "BadChecking1", 10.0f));
-        assertNull(accountServer.getAccount("BadChecking1"));
+        assertTrue(!_accountServer.newAccount("BLAH", "BadChecking1", 10.0f));
+        assertNull(_accountServer.getAccount("BadChecking1"));
 	}
 	
     /**
@@ -38,10 +39,10 @@ public class AccountServerTest {
      */
     @Test (expected=java.lang.IllegalArgumentException.class)
     public void testNewAccountBalance() {
-      assertTrue(!accountServer.newAccount("Checking", "BadChecking2", -10.0f));
-      assertTrue(!accountServer.newAccount("Savings", "BadSavings2", -10.0f));
-      assertNull(accountServer.getAccount("BadChecking2"));
-      assertNull(accountServer.getAccount("BadChecking2"));
+      assertTrue(!_accountServer.newAccount("Checking", "BadChecking2", -10.0f));
+      assertTrue(!_accountServer.newAccount("Savings", "BadSavings2", -10.0f));
+      assertNull(_accountServer.getAccount("BadChecking2"));
+      assertNull(_accountServer.getAccount("BadChecking2"));
     }   
 
     /**
@@ -49,8 +50,8 @@ public class AccountServerTest {
      */
     @Test
     public void testNewAccountDuplicate() {
-        assertTrue(!accountServer.newAccount("Savings", "CheckingTest1", 500.0f));
-        assertTrue(!accountServer.newAccount("Savings", "SavingsTest1", 500.0f));
+        assertTrue(!_accountServer.newAccount("Savings", "CheckingTest1", 500.0f));
+        assertTrue(!_accountServer.newAccount("Savings", "SavingsTest1", 500.0f));
     }
     
 	/**
@@ -60,19 +61,19 @@ public class AccountServerTest {
 	@Test
 	public void testNewAccount() {
 		// Get all the accounts
-		List<Account> accounts = accountServer.getAllAccounts();
+		List<Account> accounts = _accountServer.getAllAccounts();
 		
 		// Add the accounts
-		if (accountServer.newAccount("Checking",  "Checkingnewtest1", 100.0f) &&
-		    accountServer.newAccount("Savings",  "Savingsnewtest1", 100.0f)) {
+		if (_accountServer.newAccount("Checking",  "Checkingnewtest1", 100.0f) &&
+		    _accountServer.newAccount("Savings",  "Savingsnewtest1", 100.0f)) {
 		
 		    // Now when I get the accounts again there should be 2 new ones
-	        List<Account>updatedAccounts = accountServer.getAllAccounts();
+	        List<Account>updatedAccounts = _accountServer.getAllAccounts();
 	        // this assert checks that we didn't blow away one that shouldn't be touched
 	        assertTrue(updatedAccounts.containsAll(accounts));
 	        // These check what we put in got in
-	        assertNotNull(accountServer.getAccount("Checkingnewtest1"));
-	        assertNotNull(accountServer.getAccount("Savingsnewtest1"));
+	        assertNotNull(_accountServer.getAccount("Checkingnewtest1"));
+	        assertNotNull(_accountServer.getAccount("Savingsnewtest1"));
 		} else {
 		    fail("failed to add new acocunts");
 		}
@@ -80,17 +81,17 @@ public class AccountServerTest {
 
 	@Test
 	public void testGetAccount() {
-		accountServer.newAccount("Checking", "CheckingGetTest", 100.0f);
+		_accountServer.newAccount("Checking", "CheckingGetTest", 100.0f);
 		
 		// how were each of these tests arrived at?
-		assertNotNull(accountServer.getAccount("CheckingGetTest"));
-		assertNull(accountServer.getAccount(null));
-		assertNull(accountServer.getAccount(""));
-		assertNull(accountServer.getAccount("  blah   blah   "));
-		assertNull(accountServer.getAccount("CheckingGetTes"));
-		assertNull(accountServer.getAccount("heckingGetTest"));
-		assertNull(accountServer.getAccount("CheckingGetTest2"));
-		assertNull(accountServer.getAccount("Checking GetTest"));
-		assertNull(accountServer.getAccount("checkinggettest"));
+		assertNotNull(_accountServer.getAccount("CheckingGetTest"));
+		assertNull(_accountServer.getAccount(null));
+		assertNull(_accountServer.getAccount(""));
+		assertNull(_accountServer.getAccount("  blah   blah   "));
+		assertNull(_accountServer.getAccount("CheckingGetTes"));
+		assertNull(_accountServer.getAccount("heckingGetTest"));
+		assertNull(_accountServer.getAccount("CheckingGetTest2"));
+		assertNull(_accountServer.getAccount("Checking GetTest"));
+		assertNull(_accountServer.getAccount("checkinggettest"));
 	}
 }
