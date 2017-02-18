@@ -1,3 +1,10 @@
+/*
+  File:	MainFrame.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: GUI creation and handling class
+*/
 package banking.gui;
 
 import banking.primitive.core.Account;
@@ -127,7 +134,7 @@ private	JButton			displayODAccountsButton;
 	/**
 	  Class: DisplayHandler
 	  
-	  Description: Class for implementing the display and interaction to user
+	  Description: Handles the display generically to the user with regard to GUI
 	*/
 	class DisplayHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -150,7 +157,7 @@ private	JButton			displayODAccountsButton;
 	/**
 	  Class: NewAccountHandler
 	  
-	  Description: Handles new account creation with gui
+	  Description: Helps in the creation of new acccount with regard to GUI
 	*/
 	// Complete a handler for new account button
 	class NewAccountHandler implements ActionListener {
@@ -169,8 +176,8 @@ private	JButton			displayODAccountsButton;
 	/**
 	  Class: SaveAccountsHandler
 	  
-	  Description: Handles all of the options with reguard to the gui with savings account
-	*/
+	  Description: Handles the GUI with regard to savings accounts
+	*/	
 	// Complete a handler for new account button
 	class SaveAccountsHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -185,7 +192,7 @@ private	JButton			displayODAccountsButton;
 	/**
 	  Class: DepositHandler
 	  
-	  Description: Handles the deposit options with the gui
+	  Description: Handles the GUI with regard to deposits
 	*/
 	// Complete a handler for deposit button
 	class DepositHandler implements ActionListener {
@@ -201,10 +208,10 @@ private	JButton			displayODAccountsButton;
 		}
 	}
 	/**
-	  Class: WithdrawHandler
+	  Class: WithdrawHandler	
 	  
-	  Description: Handles the withdraw options in the gui
-	*/
+	  Description: Handles the GUI with regard to deposits
+	*/	
 	// Complete a handler for deposit button
 	class WithdrawHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -218,12 +225,11 @@ private	JButton			displayODAccountsButton;
 			}		
 		}
 	}
-	
 	/**
-	  Class:	FrameHandler
+	  Class: FrameHandler
 	  
-	  Description: Handles the closing of the frame
-	*/
+	  Description: Exits program from GUI
+	*/	
 	//** Complete a handler for the Frame that terminates 
 	//** (System.exit(1)) on windowClosing event
 	// FB Lab 3 Activity 1 Step 5

@@ -1,3 +1,10 @@
+/*
+  File:	ServerSolution.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Assists in the creation and usability of servers
+*/
 package banking.primitive.core;
 
 import java.util.ArrayList;

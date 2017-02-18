@@ -1,3 +1,10 @@
+/*
+  File: Savings.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Savings class handles most functionality with all savings accounts
+*/
 package banking.primitive.core;
 /**
 Class: Savings
@@ -74,7 +81,7 @@ public class Savings extends Account {
 		return false;
 	}
 	
-	public String getType() { return "Checking"; }
+	public String getType() { return "Savings"; }
 
 	/**
 	Method: toString

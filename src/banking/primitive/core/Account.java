@@ -1,3 +1,10 @@
+/*
+  File: Account.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Abstract account class for inheritance 
+*/
 package banking.primitive.core;
 /**
 Class:	Account

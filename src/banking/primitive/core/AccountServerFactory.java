@@ -1,3 +1,10 @@
+/*
+  File: AccountServerFactory.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Deals with the creation of account servers
+*/
 package banking.primitive.core;
 
 /**

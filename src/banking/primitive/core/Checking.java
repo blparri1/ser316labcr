@@ -1,3 +1,10 @@
+/*
+  File:	Checking.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Actual implementation of the checking account for clients
+*/
 package banking.primitive.core;
 /**
 Class: Checking

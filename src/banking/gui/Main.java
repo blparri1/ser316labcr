@@ -1,3 +1,10 @@
+/*
+  File:	Main.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Main program for entry point of code
+*/
 package banking.gui;
 
 // STYLE
