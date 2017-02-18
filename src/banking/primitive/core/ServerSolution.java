@@ -14,6 +14,13 @@ class ServerSolution implements AccountServer {
 
 	Map<String,Account> accountMap = null;
 
+	/**
+	Method: ServerSolution Constructor
+	Inputs: none
+	Returns: none
+
+	Description: Creates the ServerSolution object
+	*/
 	public ServerSolution() {
 		accountMap = new HashMap<String,Account>();
 		File file = new File(fileName);
@@ -47,6 +54,13 @@ class ServerSolution implements AccountServer {
 		}
 	}
 	
+	/**
+	Method: newAccountFactory
+	Inputs: String type of account, String name of the account, float balance of the account
+	Returns: boolean true if successful, false otherwise
+
+	Description: Will create a new account based on the parameters passed
+	*/
 	private boolean newAccountFactory(String type, String name, float balance)
 		throws IllegalArgumentException {
 		
@@ -68,6 +82,13 @@ class ServerSolution implements AccountServer {
 		return true;
 	}
 
+	/**
+	Method: newAccount
+	Inputs: String type of the account, String name of the account, float balance of the account
+	Returns: boolean true if successful, false otherwise
+
+	Description: Creates new account with the parameters passed
+	*/
 	public boolean newAccount(String type, String name, float balance) 
 		throws IllegalArgumentException {
 		//Fix for Coding Standards - 8
@@ -78,6 +99,13 @@ class ServerSolution implements AccountServer {
 		return newAccountFactory(type, name, balance);
 	}
 	
+	/**
+	Method: closeAcccount	
+	Inputs: String name of the account to be closed
+	Returns: boolean true if successful, false otherwise
+
+	Description: Will close the account of the passed name
+	*/
 	public boolean closeAccount(String name) {
 		Account acc = accountMap.get(name);
 		if (acc == null) {
@@ -106,6 +134,13 @@ class ServerSolution implements AccountServer {
 		return result;
 	}
 	
+	/**
+	Method: saveAccounts
+	Inputs: none
+	Returns: none
+
+	Description: Saves the state of the server
+	*/
 	public void saveAccounts() throws IOException {
 		ObjectOutputStream out = null; 
 		try {
