@@ -20,9 +20,7 @@ Class: AccountServerTest
 Description: Tests the creation and use of AccountServer
 */
 public class AccountServerTest {
-	//Fix Coding Standard - 4
-	private static AccountServer _accountServer = null;
-	
+	//Fix Coding Standard - 4	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		_accountServer = AccountServerFactory.getMe().lookup();
@@ -105,4 +103,5 @@ public class AccountServerTest {
 		assertNull(_accountServer.getAccount("Checking GetTest"));
 		assertNull(_accountServer.getAccount("checkinggettest"));
 	}
+	private static AccountServer _accountServer = null;
 }

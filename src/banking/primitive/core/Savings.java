@@ -13,9 +13,27 @@ Description: The main account class that deals with savings accounts
 */
 public class Savings extends Account {
 	//Fix Coding Standard - 4
-	private static final long _SERIALVERSIONUID = 111L;
-	private int _numWithdraws = 0;
+	
+	/**
+	Method: deposit
+	Inputs: float amount to be deposited
+	Returns: boolean true if the deposit was successful, otherwise false
 
+	Description: A deposit comes with a fee of 50 cents per deposit
+	*/
+	public boolean deposit(float amount) {
+		if (getState() != State.CLOSED && amount > 0.0f) {
+			balance = balance + amount - 0.50F;
+			if (balance >= 0.0f) {
+				setState(State.OPEN);
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public String getType() { return "Savings"; }
+	
 	/**
 	Method: Savings Constructor
 	Inputs: String name of the account
@@ -36,24 +54,6 @@ public class Savings extends Account {
 	*/
 	public Savings(String name, float balance) throws IllegalArgumentException {
 		super(name, balance);
-	}
-
-	/**
-	Method: deposit
-	Inputs: float amount to be deposited
-	Returns: boolean true if the deposit was successful, otherwise false
-
-	Description: A deposit comes with a fee of 50 cents per deposit
-	*/
-	public boolean deposit(float amount) {
-		if (getState() != State.CLOSED && amount > 0.0f) {
-			balance = balance + amount - 0.50F;
-			if (balance >= 0.0f) {
-				setState(State.OPEN);
-			}
-			return true;
-		}
-		return false;
 	}
 
 	/**
@@ -80,8 +80,6 @@ public class Savings extends Account {
 		}
 		return false;
 	}
-	
-	public String getType() { return "Savings"; }
 
 	/**
 	Method: toString
@@ -93,4 +91,6 @@ public class Savings extends Account {
 	public String toString() {
 		return "Savings: " + getName() + ": " + getBalance();
 	}
+	private static final long _SERIALVERSIONUID = 111L;
+	private int _numWithdraws = 0;
 }
