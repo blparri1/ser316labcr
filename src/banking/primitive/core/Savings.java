@@ -1,5 +1,9 @@
 package banking.primitive.core;
+/**
+Class: Savings
 
+Description: The main account class that deals with savings accounts
+*/
 public class Savings extends Account {
 	//Fix Coding Standard - 4
 	private static final long _SERIALVERSIONUID = 111L;

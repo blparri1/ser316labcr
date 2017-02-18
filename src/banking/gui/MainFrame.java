@@ -10,7 +10,11 @@ import java.awt.FlowLayout;
 import java.awt.Container;
 import java.awt.event.*;
 import javax.swing.*;
+/**
+Class: MainFrame
 
+Description: Main class for user interfaces
+*/
 @SuppressWarnings("serial")
 class MainFrame extends JFrame {
 	AccountServer	myServer;
