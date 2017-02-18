@@ -1,3 +1,10 @@
+/*
+  File:	MainFrame.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: GUI creation and handling class
+*/
 package banking.gui;
 
 import banking.primitive.core.Account;
@@ -10,11 +17,7 @@ import java.awt.FlowLayout;
 import java.awt.Container;
 import java.awt.event.*;
 import javax.swing.*;
-/**
-Class: MainFrame
 
-Description: Main class for user interfaces
-*/
 @SuppressWarnings("serial")
 class MainFrame extends JFrame {
 	AccountServer	myServer;
@@ -124,11 +127,7 @@ private	JButton			displayODAccountsButton;
 		
 		setSize(400, 250);
 	}
-	/**
-	  Class: DisplayHandler
-	  
-	  Description: Class for implementing the display and interaction to user
-	*/
+
 	class DisplayHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			List<Account> accounts = null;
@@ -147,11 +146,7 @@ private	JButton			displayODAccountsButton;
 			JOptionPane.showMessageDialog(null, sb.toString());
 		}
 	}
-	/**
-	  Class: NewAccountHandler
-	  
-	  Description: Handles new account creation with gui
-	*/
+
 	// Complete a handler for new account button
 	class NewAccountHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -166,11 +161,7 @@ private	JButton			displayODAccountsButton;
 			}
 		}
 	}
-	/**
-	  Class: SaveAccountsHandler
-	  
-	  Description: Handles all of the options with reguard to the gui with savings account
-	*/
+	
 	// Complete a handler for new account button
 	class SaveAccountsHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -182,11 +173,7 @@ private	JButton			displayODAccountsButton;
 			}
 		}
 	}
-	/**
-	  Class: DepositHandler
-	  
-	  Description: Handles the deposit options with the gui
-	*/
+
 	// Complete a handler for deposit button
 	class DepositHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -200,11 +187,6 @@ private	JButton			displayODAccountsButton;
 			}		
 		}
 	}
-	/**
-	  Class: WithdrawHandler
-	  
-	  Description: Handles the withdraw options in the gui
-	*/
 	// Complete a handler for deposit button
 	class WithdrawHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -219,11 +201,6 @@ private	JButton			displayODAccountsButton;
 		}
 	}
 	
-	/**
-	  Class:	FrameHandler
-	  
-	  Description: Handles the closing of the frame
-	*/
 	//** Complete a handler for the Frame that terminates 
 	//** (System.exit(1)) on windowClosing event
 	// FB Lab 3 Activity 1 Step 5

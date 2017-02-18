@@ -1,3 +1,10 @@
+/*
+  File:	ServerSolution.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Assists in the creation and usability of servers
+*/
 package banking.primitive.core;
 
 import java.util.ArrayList;
@@ -7,11 +14,7 @@ import java.util.HashMap;
 import java.io.*;
 
 import banking.primitive.core.Account.State;
-/**
-Class: ServerSolution
 
-Description: Supports the overall program with creation and usage of accounts
-*/
 class ServerSolution implements AccountServer {
 	//Fix Coding Standards - 6
 	static final String fileName = "accounts.ser";

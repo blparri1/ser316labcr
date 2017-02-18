@@ -1,3 +1,10 @@
+/*
+  File: AccountServerTest.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Tests the functionality of the AccountServer class
+*/
 package banking.primitive.core;
 
 import static org.junit.Assert.*;
@@ -7,11 +14,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-/**
-Class: AccountServerTest	
 
-Description: Tests the creation and use of AccountServer
-*/
 public class AccountServerTest {
 	//Fix Coding Standard - 4
 	private static AccountServer _accountServer = null;
