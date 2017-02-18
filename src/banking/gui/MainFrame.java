@@ -10,23 +10,34 @@ import java.awt.FlowLayout;
 import java.awt.Container;
 import java.awt.event.*;
 import javax.swing.*;
+/**
+Class: MainFrame
 
+Description: Main class for user interfaces
+*/
 @SuppressWarnings("serial")
 class MainFrame extends JFrame {
 	AccountServer	myServer;
-	Properties		props;
-	JLabel			typeLabel;
-	JLabel			nameLabel;
-	JLabel			balanceLabel;
-	JComboBox		typeOptions;
-	JTextField		nameField;
-	JTextField		balanceField;
-	JButton 		depositButton;
-	JButton 		withdrawButton;
-	JButton			newAccountButton;
-	JButton			displayAccountsButton;
-	JButton			displayODAccountsButton;
+private	Properties		props;
+private	JLabel			typeLabel;
+private	JLabel			nameLabel;
+private	JLabel			balanceLabel;
+private	JComboBox		typeOptions;
+private	JTextField		nameField;
+private	JTextField		balanceField;
+private	JButton 		depositButton;
+private	JButton 		withdrawButton;
+private	JButton			newAccountButton;
+private	JButton			displayAccountsButton;
+private	JButton			displayODAccountsButton;
 
+	/**
+	Method: MainFrame Constructor
+	Inputs: String propertyFile
+	Returns: nothing
+
+	Description: Constructor for the MainFrame class
+	*/
 	public MainFrame(String propertyFile) throws IOException {
 
 		//** initialize myServer
@@ -43,11 +54,18 @@ class MainFrame extends JFrame {
 			ioe.printStackTrace();
 			throw ioe;
 		}
-		constructForm();
+		_constructForm();
 	}
 
-	
-	private void constructForm() {
+	/**
+	Method: _constructForm()
+	Inputs: none
+	Returns: void
+
+	Description: Builds the GUI for the program
+	*/
+	//Fix Coding Standard - 4
+	private void _constructForm() {
 		//*** Make these read from properties
 		typeLabel		= new JLabel(props.getProperty("TypeLabel"));
 		nameLabel		= new JLabel(props.getProperty("NameLabel"));
@@ -106,7 +124,11 @@ class MainFrame extends JFrame {
 		
 		setSize(400, 250);
 	}
-
+	/**
+	  Class: DisplayHandler
+	  
+	  Description: Class for implementing the display and interaction to user
+	*/
 	class DisplayHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			List<Account> accounts = null;
@@ -125,7 +147,11 @@ class MainFrame extends JFrame {
 			JOptionPane.showMessageDialog(null, sb.toString());
 		}
 	}
-
+	/**
+	  Class: NewAccountHandler
+	  
+	  Description: Handles new account creation with gui
+	*/
 	// Complete a handler for new account button
 	class NewAccountHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -140,7 +166,11 @@ class MainFrame extends JFrame {
 			}
 		}
 	}
-	
+	/**
+	  Class: SaveAccountsHandler
+	  
+	  Description: Handles all of the options with reguard to the gui with savings account
+	*/
 	// Complete a handler for new account button
 	class SaveAccountsHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -152,7 +182,11 @@ class MainFrame extends JFrame {
 			}
 		}
 	}
-
+	/**
+	  Class: DepositHandler
+	  
+	  Description: Handles the deposit options with the gui
+	*/
 	// Complete a handler for deposit button
 	class DepositHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -166,6 +200,11 @@ class MainFrame extends JFrame {
 			}		
 		}
 	}
+	/**
+	  Class: WithdrawHandler
+	  
+	  Description: Handles the withdraw options in the gui
+	*/
 	// Complete a handler for deposit button
 	class WithdrawHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -180,6 +219,11 @@ class MainFrame extends JFrame {
 		}
 	}
 	
+	/**
+	  Class:	FrameHandler
+	  
+	  Description: Handles the closing of the frame
+	*/
 	//** Complete a handler for the Frame that terminates 
 	//** (System.exit(1)) on windowClosing event
 	// FB Lab 3 Activity 1 Step 5

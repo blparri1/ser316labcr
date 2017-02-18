@@ -4,14 +4,18 @@ package banking.gui;
 import javax.swing.JFrame;
 
 /**
- * main method for running the program.
- * @author kevinagary
- *
- */
+Class: Main
+
+Description: Java main class for entry point
+*/
 final class Main {
 	/**
-	 * Private constructor to address STYLE issue.
-	 */
+	Method: Main Constructor
+	Inputs: None
+	Returns: None
+
+	Description: Blank because it should not exist
+	*/
 	private Main() {
 	}
 	
@@ -20,6 +24,13 @@ final class Main {
 	 * @param args command-line arguments
 	 * @throws Exception as per typical main specifications
 	 */
+	/**
+	Method: main
+	Inputs: String[] args
+	Returns: nothing
+
+	Description: Main method of the program
+	*/
 	public static void main(final String[] args) throws Exception {
 
 		if (args.length != 1) {

@@ -2,24 +2,28 @@ package banking.primitive.core;
 
 import java.io.IOException;
 import java.util.List;
+/**
+Interface: AccountServer
 
+Description: Server for use with all accounts
+*/
 public interface AccountServer {
 
-	/** 
-	 *  Create a new account object in the server. if an account already exists with the given name
-	 *  then a new account is not created and stored.
-	 *  
-		@param type must be one of Savings or Checking
-		@param name leading or trailing whitespace is removed
-		@param balance must be non-negative
-		@throws IllegalArgumentException if the account type is invalid or the balance is non-negative.
-		@return boolean true if the account was created and stored, false otherwise
+	/**
+	Method: newAccount
+	Inputs: String type must be one of Savings or Checking, String name leading or trailing whitespace is removed, float balance must be non-negative
+	Returns: boolean true if the account was created and stored, false otherwise
+
+	Description: Create a new account object in the server. if an account already exists with the given name then a new account is not created and stored.
 	*/
 	public boolean	newAccount(String type, String name, float balance) throws IllegalArgumentException;
 
-	/** Close an account 
-		@param name leading or trailing whitespace is removed
-	 * @return boolean true if there was an account with this name and close was successful
+	/**
+	Method: newAccount
+	Inputs: String name leading or trailing whitespace is removed
+	Returns: boolean true if there was an account with this name and close was successful
+
+	Description: Close an account
 	*/
 	public boolean	closeAccount(String name);
 
@@ -39,9 +43,12 @@ public interface AccountServer {
 	 */
 	public List<Account> getActiveAccounts();
 
-	/** 
-	 * Saves the state of the server
-	 * @throws IOException if unable to save the state
-	 */
+	/**
+	Method: saveAccounts
+	Inputs: none
+	Returns: none 
+
+	Description: Saves the state of the server
+	*/
 	public void	saveAccounts() throws IOException;
 }
