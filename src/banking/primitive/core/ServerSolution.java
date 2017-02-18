@@ -12,7 +12,7 @@ class ServerSolution implements AccountServer {
 	//Fix Coding Standards - 6
 	static final String fileName = "accounts.ser";
 
-	Map<String,Account> accountMap = null;
+	private Map<String,Account> accountMap = null;
 
 	/**
 	Method: ServerSolution Constructor
