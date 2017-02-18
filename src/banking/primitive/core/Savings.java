@@ -1,8 +1,9 @@
 package banking.primitive.core;
 
 public class Savings extends Account {
-	private static final long serialVersionUID = 111L;
-	private int numWithdraws = 0;
+	//Fix Coding Standard - 4
+	private static final long _SERIALVERSIONUID = 111L;
+	private int _numWithdraws = 0;
 
 	public Savings(String name) {
 		super(name);
@@ -32,9 +33,9 @@ public class Savings extends Account {
 	public boolean withdraw(float amount) {
 		if (getState() == State.OPEN && amount > 0.0f) {
 			balance = balance - amount;
-			numWithdraws++;
+			_numWithdraws++;
 			//Fix for Coding Standards - 8
-			if (numWithdraws > 3) {
+			if (_numWithdraws > 3) {
 				balance = balance - 1.0f;
 			}
 				
