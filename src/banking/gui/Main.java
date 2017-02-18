@@ -11,10 +11,10 @@ package banking.gui;
 import javax.swing.JFrame;
 
 /**
- * main method for running the program.
- * @author kevinagary
- *
- */
+Class: Main
+
+Description: Java main class for entry point
+*/
 final class Main {
 	/**
 	Method: Main Constructor

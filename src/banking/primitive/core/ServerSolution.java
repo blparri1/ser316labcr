@@ -14,7 +14,11 @@ import java.util.HashMap;
 import java.io.*;
 
 import banking.primitive.core.Account.State;
+/**
+Class: ServerSolution
 
+Description: Supports the overall program with creation and usage of accounts
+*/
 class ServerSolution implements AccountServer {
 	//Fix Coding Standards - 6
 	static final String fileName = "accounts.ser";
