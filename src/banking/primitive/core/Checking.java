@@ -1,9 +1,12 @@
-package banking.primitive.core;
-/**
-Class: Checking
-
-Description: The main account class that deals with checking accounts
+/*
+  File:	Checking.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Actual implementation of the checking account for clients
 */
+package banking.primitive.core;
+
 public class Checking extends Account {
 	//Fix Coding Standard - 4
 	private static final long _serialVersionUID = 11L;

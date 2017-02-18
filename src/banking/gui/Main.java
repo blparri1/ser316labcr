@@ -1,13 +1,20 @@
+/*
+  File:	Main.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Main program for entry point of code
+*/
 package banking.gui;
 
 // STYLE
 import javax.swing.JFrame;
 
 /**
-Class: Main
-
-Description: Java main class for entry point
-*/
+ * main method for running the program.
+ * @author kevinagary
+ *
+ */
 final class Main {
 	/**
 	Method: Main Constructor

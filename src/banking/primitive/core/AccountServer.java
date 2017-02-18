@@ -1,12 +1,15 @@
+/*
+  File: AccountServer.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: interface to be implemented to properly use accounts
+*/
 package banking.primitive.core;
 
 import java.io.IOException;
 import java.util.List;
-/**
-Interface: AccountServer
 
-Description: Server for use with all accounts
-*/
 public interface AccountServer {
 
 	/**

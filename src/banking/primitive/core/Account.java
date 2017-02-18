@@ -1,10 +1,12 @@
-package banking.primitive.core;
-/**
-Class:	Account
-
-Description: The abstract class that other account type classes
-will use to inherit from.
+/*
+  File: Account.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Abstract account class for inheritance 
 */
+package banking.primitive.core;
+
 public abstract class Account implements java.io.Serializable {
     private static final long SERIALVERSIONUID = 1L;
 

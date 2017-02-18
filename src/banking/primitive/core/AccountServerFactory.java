@@ -1,11 +1,13 @@
+/*
+  File: AccountServerFactory.java
+  Author: kevinagary
+  Date:	Spring 2017
+  
+  Description: Deals with the creation of account servers
+*/
 package banking.primitive.core;
 
-/**
-Class: AccountServerFactory
 
-Description: Class enables the creation of other accounts in an
-orthogonal and object oriented style
-*/
 public class AccountServerFactory {
 
 	protected static AccountServerFactory singleton = null;
